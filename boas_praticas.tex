@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{article}
+
+% ======================
+% Pacotes essenciais
+% ======================
+\usepackage[utf8]{inputenc}    % Suporte a acentuação
+\usepackage[T1]{fontenc}       % Codificação correta das fontes
+\usepackage[brazil]{babel}     % Idioma português
+\usepackage{amsmath, amssymb}  % Matemática
+\usepackage{graphicx}          % Inserção de imagens
+\usepackage{xcolor}            % Cores (para o código-fonte)
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,        % links coloridos no lugar de caixas
+  linkcolor=black,         % cor dos links internos (como no sumário)
+  citecolor=blue,         % cor para referências bibliográficas
+  urlcolor=blue           % cor para URLs
+}
+
+\usepackage{geometry}          % Margens personalizadas
+\geometry{margin=2.5cm}
+
+% ======================
+% Título
+% ======================
+\title{Guia Básico de LaTeX com Boas Práticas}
+\author{Escrito em \LaTeX}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ======================
+\section{Introdução}
+Este documento ensina LaTeX usando boas práticas e exemplos reais. Ideal para quem está começando e deseja manter os arquivos limpos e organizados.
+
+% ======================
+\section{Estrutura Básica}
+Todo documento começa com a classe e os pacotes:
+
+\begin{verbatim}
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\begin{document}
+Conteúdo aqui
+\end{document}
+\end{verbatim}
+
+% ======================
+\section{Seções e Organização}
+\begin{verbatim}
+\section{Título}
+\subsection{Subseção}
+\subsubsection{Subsubseção}
+\end{verbatim}
+
+% ======================
+\section{Texto Formatado}
+Você pode destacar partes do texto usando comandos simples. Veja como:
+
+\begin{itemize}
+  \item Negrito: use \verb|\textbf{texto}| → \textbf{assim}
+  \item Itálico: use \verb|\textit{texto}| → \textit{assim}
+  \item Sublinhado: use \verb|\underline{texto}| → \underline{assim}
+  \item Para mostrar um código curto no meio da frase, use \verb|\verb|, como em \verb|\LaTeX|
+\end{itemize}
+
+% ======================
+\section{Listas}
+
+\subsection*{Não ordenada}
+\begin{verbatim}
+\begin{itemize}
+  \item Item 1
+  \item Item 2
+\end{itemize}
+\end{verbatim}
+
+\subsection*{Ordenada}
+\begin{verbatim}
+\begin{enumerate}
+  \item Primeiro
+  \item Segundo
+\end{enumerate}
+\end{verbatim}
+
+% ======================
+\section{Equações}
+
+\subsection*{No meio do texto}
+Para colocar uma equação dentro de uma linha de texto, use cifrões simples \verb|$...$| ou o comando \verb|\(...\)|.  
+Exemplo: \verb|E = mc^2| → \( E = mc^2 \)
+
+\subsection*{Equação Centralizada}
+Para destacar uma equação no centro da página, use o ambiente \texttt{equation}:
+
+\begin{verbatim}
+\begin{equation}
+  E = mc^2
+\end{equation}
+\end{verbatim}
+
+Resultado:
+\begin{equation}
+  E = mc^2
+\end{equation}
+
+% ======================
+\section{Imagens}
+\begin{verbatim}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.5\textwidth]{exemplo.png}
+  \caption{Exemplo de imagem}
+  \label{fig:imagem}
+\end{figure}
+\end{verbatim}
+
+% ======================
+\section{Citações e Referências}
+
+\subsection*{Manual}
+\begin{verbatim}
+\begin{thebibliography}{9}
+\bibitem{knuth}
+Knuth, Donald.
+\textit{The TeXbook}.
+Addison-Wesley, 1984.
+\end{thebibliography}
+\end{verbatim}
+
+\subsection*{BibTeX}
+\begin{verbatim}
+\bibliographystyle{abbrv}
+\bibliography{referencias}
+\end{verbatim}
+
+% ======================
+\section{Boas Práticas Recomendadas}
+\begin{itemize}
+  \item Separe o conteúdo em arquivos com \verb|\input{}|
+  \item Organize imagens em uma pasta \texttt{img/}
+  \item Evite usar \verb|\\| para pular linhas
+  \item Crie comandos próprios com \verb|\newcommand{}|
+  \item Use UTF-8 e compile com \texttt{pdflatex} ou \texttt{lualatex}
+  \item Use \texttt{.bib} para referências bibliográficas
+\end{itemize}
+
+% ======================
+\section{Conclusão}
+O \LaTeX\ é poderoso e ideal para textos técnicos e científicos. Seguindo boas práticas, você terá documentos bem organizados, limpos e profissionais.
+
+\end{document}
