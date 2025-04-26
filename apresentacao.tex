@@ -1,0 +1,40 @@
+% Aula 04 - Apresentações
+
+% ------Falta terminar a anotação------
+
+% beamer é uma classe usada para fazer slides
+\documentclass{beamer}
+% \usetheme{nome-do-tema}
+% \usecolortheme{nome-da-cor}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+
+\title{Minha primeira apresentação}
+\institute{Universidade Federal do Delta do Parnaíba}
+\author{Francisco Alves Ribeiro Neto}
+% \date{00/00/0000}
+\logo{\includegraphics[scale= 0.12]{imagens/ufdpar-logo.png}}
+% Esse logo fica em todas as páginas
+
+\begin{document}
+\frame{\titlepage}
+
+\frame{\tableofcontents}
+\section{UsandoBeamer}
+
+\frame{   \frametitle{Características}
+    \begin{itemize}
+        \item<1->Classe
+        \item<2->Sobreposições
+        \item<3->Transições
+    \end{itemize}
+}
+
+\subsection{Uma subseção}
+\frame{
+    \frametitle{Subseção}
+    Assim se divide uma apresentação em sessões.
+}
+
+
+\end{document}

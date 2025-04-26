@@ -1,0 +1,40 @@
+% Aula 04 - Tabelas
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\begin{document}
+
+\begin{tabular}{c | l}
+    Parâmetro & Tipo de alinhamento   \\ \hline
+     $r$      &  right (a direita)    \\
+     $l$      &  left (a esquerda)    \\
+     $c$      & center (centralizado) \\ \hline
+\end{tabular} \\ \vspace{0.5cm}
+
+\begin{tabular}{|c|c|}
+    \hline
+     Parâmetro & Tipo de alinhamento   \\ \hline
+     $r$      &  right (a direita)    \\
+     $l$      &  left (a esquerda)    \\
+     $c$      & center (centralizado) \\ \hline
+\end{tabular} \\ \vspace{0.5cm}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c | c |}
+         \hline
+                       & \multicolumn{3}{c|}{Notas} \\
+                        \cline{2-4}    % colunas 2 até 4
+             Nome      & Prova 1 &  Prova 2 & Média \\
+        \hline
+         José Pereira  &  5,0    &    6,0   &  5,5  \\
+         Sérgio Brito  &  7,0    &    6,0   &  6,5  \\
+         Paulo Gustavo &  8,6    &    9,0   &  9,5  \\
+        \hline
+    \end{tabular}
+    \caption{Resultado da seleção}
+    \label{tab:my_label}
+\end{table}
+
+\end{document}

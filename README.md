@@ -1,0 +1,1 @@
+# Anotações sobre estudos de LaTeX e um minicurso feito na UFDPar

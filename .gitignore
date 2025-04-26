@@ -1,3 +1,4 @@
+# Arquivos auxiliares do LaTeX
 *.aux
 *.log
 *.out
@@ -5,4 +6,20 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+*.bbl
+*.blg
+*.xdv
+
+# Arquivos de saída (como o PDF final)
 *.pdf
+
+# Diretório de saída (usado por LaTeX Workshop)
+latex.out/
+
+# Pasta personalizada para arquivos de compilação
+files/
