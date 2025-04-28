@@ -3,28 +3,64 @@
 % ------Falta terminar a anotação------
 
 % beamer é uma classe usada para fazer slides
-\documentclass{beamer}
 % \usetheme{nome-do-tema}
 % \usecolortheme{nome-da-cor}
+\documentclass{beamer}
+\usetheme{default}
+
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
+\usepackage{xcolor} % Pacote para definir novas cores
 
 \title{Minha primeira apresentação}
 \institute{Universidade Federal do Delta do Parnaíba}
 \author{Francisco Alves Ribeiro Neto}
 % \date{00/00/0000}
-\logo{\includegraphics[scale= 0.12]{imagens/ufdpar-logo.png}}
+\logo{\includegraphics[scale=0.12]{imagens/ufdpar-logo.png}}
 % Esse logo fica em todas as páginas
 
 \begin{document}
+
 \frame{\titlepage}
 
 \frame{\tableofcontents}
+
 \section{UsandoBeamer}
 
-\frame{   \frametitle{Características}
+\frame{
+    \frametitle{Características}
     \begin{itemize}
         \item<1->Classe
+              \begin{block}{Título do bloco}
+                  Texto dentro do bloco
+              \end{block}
+
+              \begin{alertblock}{Título do bloco}
+                  Texto dentro do bloco de alerta
+              \end{alertblock}
+
+              \begin{exampleblock}{Título do bloco}
+                  Texto dentro do bloco de exemplo
+              \end{exampleblock}
+
+              % Definindo novas cores
+              \definecolor{cor1}{rgb}{0.12,0.22,0.55}
+              \definecolor{cor2}{rgb}{0.25,0.40,0.83}
+              \setbeamercolor{cor1}{bg=cor1, fg=cor2}
+              \setbeamercolor{cor2}{bg=cor2, fg=cor1}
+
+              % Usando beamercolorbox com nova cor
+              \begin{beamercolorbox}[shadow=true,rounded=true,center]{cor1}
+                  Texto dentro da caixa 1
+              \end{beamercolorbox}
+
+              \vspace{0.3cm}
+
+              % Usando beamerboxesrounded com as cores definidas
+              \begin{beamerboxesrounded}[lower=cor2, upper=cor1, shadow=true]{Título da caixa}
+                  Texto dentro da caixa 2
+              \end{beamerboxesrounded}
+
         \item<2->Sobreposições
         \item<3->Transições
     \end{itemize}
@@ -35,6 +71,5 @@
     \frametitle{Subseção}
     Assim se divide uma apresentação em sessões.
 }
-
 
 \end{document}
