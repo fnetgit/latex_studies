@@ -1,0 +1,155 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[top=3cm,right=2cm,bottom=2cm,left=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    \onehalfspacing
+
+    \textbf{UNIVERSIDADE FEDERAL DO DELTA DO PARNAÍBA} \\
+    Núcleo de Estudos em Matemática - NEMAT
+
+    \vspace{4cm}
+    \textbf{Francisco Alves Ribeiro Neto}
+
+    \vspace{4cm}
+    \textbf{\LARGE LISTA DE EXERCÍCIOS - LOGARITMOS}
+
+    \vfill
+    Parnaíba - PI \\
+    2025
+  \end{center}
+\end{titlepage}
+
+\onehalfspacing
+\section*{Exercícios sobre Logaritmos}
+
+\subsection*{Conceitos e histórico}
+\begin{enumerate}
+  \item O que é um logaritmo?
+
+  \item Assinale a alternativa que expressa corretamente o significado da igualdade $\log_b(a) = c$:
+        \begin{enumerate}
+          \item $a^b = c$
+          \item $b^c = a$
+          \item $c^a = b$
+          \item $b^a = c$
+        \end{enumerate}
+
+  \item Sobre a história dos logaritmos, julgue as afirmações a seguir como verdadeiras (V) ou falsas (F), e assinale a alternativa correta:
+
+        \begin{enumerate}
+          \item[1.] (~~) O logaritmo foi criado para facilitar cálculos manuais complexos, como multiplicações e divisões.
+          \item[2.] (~~) John Napier é considerado o criador do conceito de logaritmos no início do século XVII.
+          \item[3.] (~~) Os logaritmos naturais têm base 10 e foram os primeiros a serem utilizados na engenharia.
+          \item[4.] (~~) Logaritmo neperiano se refere ao logaritmo de base \(e\), que é uma constante irracional aproximadamente igual a 2{,}71828.
+        \end{enumerate}
+
+        \textbf{Alternativas:}
+        \begin{enumerate}
+          \item[(a)] V, V, F, V
+          \item[(b)] F, F, V, V
+          \item[(c)] V, F, V, F
+          \item[(d)] F, V, V, F
+        \end{enumerate}
+
+\end{enumerate}
+
+\subsection*{Condições de existência e propriedades operatórias}
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item Qual das expressões abaixo está bem definida?
+        \begin{enumerate}
+          \item $\log_{-2}(8)$
+          \item $\log_{2}(-8)$
+          \item $\log_{0}(8)$
+          \item $\log_{2}(8)$
+        \end{enumerate}
+
+  \item Sabendo que $\log 2 = 0{,}3010$ e $\log 3 = 0{,}4771$, qual o valor de $\log(18)$?
+        \begin{enumerate}
+          \item[(a)] 0{,}7781
+          \item[(b)] 0{,}9542
+          \item[(c)] 1{,}2552
+          \item[(d)] 1{,}2300
+        \end{enumerate}
+
+  \item Simplifique a expressão: $\log_3(81)$.
+\end{enumerate}
+
+\subsection*{Funções e equações logarítmicas}
+\begin{enumerate}
+  \setcounter{enumi}{6}
+  \item O gráfico da função $f(x) = \log_2(x)$ é crescente ou decrescente?
+
+  \item Resolva a equação: $\log_2(x) = 5$
+
+  \item Qual o domínio da função $f(x) = \log(x - 2)$?
+
+  \item Qual é a função inversa de $f(x) = \log_2(x)$?
+\end{enumerate}
+
+\newpage
+
+\section*{Gabarito}
+
+\begin{enumerate}
+  \item O logaritmo é o inverso da exponenciação. Ele responde à pergunta: "A que potência devemos elevar a base para obter um determinado número?". Ou seja, $\log_b(a) = c$ significa que a base $b$ elevada à potência $c$ resulta no número $a$. Isso é, $b^c = a$.
+
+  \item (b) A igualdade $\log_b(a) = c$ significa que $b^c = a$.
+
+  \item (a)
+        \begin{itemize}
+          \item (V) Criado para facilitar cálculos manuais.
+          \item (V) Napier foi o primeiro a publicar o conceito de logaritmos.
+          \item (F) Logaritmos naturais têm base \(e\), não 10 (essa base 10 é o logaritmo decimal).
+          \item (V) “Neperiano” designa exatamente o logaritmo de base \(e\).
+        \end{itemize}
+
+
+  \item (d) A expressão $\log_2(8)$ está bem definida, pois a base é 2 (positiva e diferente de 1), e o argumento é 8 (positivo).
+        Para que o logaritmo seja bem definido, a base deve ser positiva e diferente de 1, e o argumento deve ser maior que 0.
+
+  \item (c) Como $18 = 2 \cdot 3^2$, temos:
+        \[
+          \log(18) = \log(2) + \log(3^2) = \log(2) + 2 \cdot \log(3)
+        \]
+        \[
+          \log(18) = 0{,}3010 + 2 \cdot 0{,}4771 = 0{,}3010 + 0{,}9542 = 1{,}2552
+        \]
+
+  \item Para simplificar $\log_3(81)$, sabemos que $81 = 3^4$, então:
+        \[
+          \log_3(81) = \log_3(3^4) = 4.
+        \]
+        Portanto, $\log_3(81) = 4$.
+
+  \item O gráfico da função $f(x) = \log_2(x)$ é crescente, pois, à medida que $x$ aumenta, o valor de $f(x)$ também aumenta.
+
+  \item Para resolver a equação $\log_2(x) = 5$, devemos reescrever a equação na forma exponencial:
+        \[
+          x = 2^5.
+        \]
+        Logo, $x = 32$.
+
+  \item O domínio da função $f(x) = \log(x - 2)$ é determinado pela condição de que o argumento do logaritmo deve ser positivo:
+        \[
+          x - 2 > 0 \quad \Rightarrow \quad x > 2.
+        \]
+        Portanto, o domínio da função é $x > 2$.
+
+  \item A função inversa de $f(x) = \log_2(x)$ é obtida trocando as variáveis e resolvendo para $x$:
+        \[
+          y = \log_2(x) \quad \Rightarrow \quad x = 2^y.
+        \]
+        Logo, a função inversa é $f^{-1}(x) = 2^x$.
+\end{enumerate}
+
+\end{document}
