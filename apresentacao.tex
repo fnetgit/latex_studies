@@ -1,69 +1,83 @@
 % Aula 04 - Apresentações
 
-% ------Falta terminar a anotação------
-
 % beamer é uma classe usada para fazer slides
-% \usetheme{nome-do-tema}
-% \usecolortheme{nome-da-cor}
 \documentclass{beamer}
+
 \usetheme{default}
+% \usecolortheme{nome-da-cor}
 
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage{xcolor} % Pacote para definir novas cores
 
+% Definição de informações sobre a apresentação
+% Essas informações são usadas principalmente no slide de título e para personalizar a apresentação.
 \title{Minha primeira apresentação}
 \institute{Universidade Federal do Delta do Parnaíba}
 \author{Francisco Alves Ribeiro Neto}
 % \date{00/00/0000}
 \logo{\includegraphics[scale=0.12]{imagens/ufdpar-logo.png}}
-% Esse logo fica em todas as páginas
+% Este logo aparecerá em todas as páginas
 
 \begin{document}
 
+% Slide inicial com o título da apresentação
 \frame{\titlepage}
 
+% Slide de conteúdo com a tabela de conteúdo (índice)
 \frame{\tableofcontents}
 
-\section{UsandoBeamer}
+\section{Seção}
 
+% Efeitos de sobreposição: cada item aparecerá em ordem conforme o avanço da apresentação
+% <n-> indica que o item aparece a partir da transição n
 \frame{
-    \frametitle{Características}
+    \frametitle{Características} 
     \begin{itemize}
-        \item<1->Classe
-              \begin{block}{Título do bloco}
-                  Texto dentro do bloco
-              \end{block}
-
-              \begin{alertblock}{Título do bloco}
-                  Texto dentro do bloco de alerta
-              \end{alertblock}
-
-              \begin{exampleblock}{Título do bloco}
-                  Texto dentro do bloco de exemplo
-              \end{exampleblock}
-
-              % Definindo novas cores
-              \definecolor{cor1}{rgb}{0.12,0.22,0.55}
-              \definecolor{cor2}{rgb}{0.25,0.40,0.83}
-              \setbeamercolor{cor1}{bg=cor1, fg=cor2}
-              \setbeamercolor{cor2}{bg=cor2, fg=cor1}
-
-              % Usando beamercolorbox com nova cor
-              \begin{beamercolorbox}[shadow=true,rounded=true,center]{cor1}
-                  Texto dentro da caixa 1
-              \end{beamercolorbox}
-
-              \vspace{0.3cm}
-
-              % Usando beamerboxesrounded com as cores definidas
-              \begin{beamerboxesrounded}[lower=cor2, upper=cor1, shadow=true]{Título da caixa}
-                  Texto dentro da caixa 2
-              \end{beamerboxesrounded}
-
-        \item<2->Sobreposições
-        \item<3->Transições
+        \item<1->Item 1
+        \item<2->Classe
+        \item<3->Sobreposições
+        \item<4->Transições
     \end{itemize}
+}
+
+% Slide separado com os blocos
+\frame{
+    \frametitle{Blocos de Destaque}
+    \begin{block}{Título do bloco}
+        Texto dentro do bloco
+    \end{block}
+
+    \begin{alertblock}{Título do bloco}
+        Texto dentro do bloco de alerta
+    \end{alertblock}
+
+    \begin{exampleblock}{Título do bloco}
+        Texto dentro do bloco de exemplo
+    \end{exampleblock}
+}
+
+% Slide separado com as caixas coloridas
+\frame{
+    \frametitle{Caixas Coloridas}
+
+    % Definindo novas cores
+    \definecolor{cor1}{rgb}{0.12,0.22,0.55}
+    \definecolor{cor2}{rgb}{0.25,0.40,0.83}
+    \setbeamercolor{cor1}{bg=cor1, fg=cor2}
+    \setbeamercolor{cor2}{bg=cor2, fg=cor1}
+
+    % Usando beamercolorbox com nova cor
+    \begin{beamercolorbox}[shadow=true,rounded=true,center]{cor1}
+        Texto dentro da caixa 1
+    \end{beamercolorbox}
+
+    \vspace{0.3cm}
+
+    % Usando beamerboxesrounded com as cores definidas para uma caixa arredondada
+    \begin{beamerboxesrounded}[lower=cor2, upper=cor1, shadow=true]{Título da caixa}
+        Texto dentro da caixa 2
+    \end{beamerboxesrounded}
 }
 
 \subsection{Uma subseção}
